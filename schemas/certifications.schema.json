@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/certifications.schema.json",
+  "title": "Microsoft certifications mapped to PCS designations",
+  "type": "object",
+  "required": ["certifications"],
+  "properties": {
+    "certifications": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/certification" }
+    }
+  },
+  "$defs": {
+    "certification": {
+      "type": "object",
+      "required": ["id", "name", "level", "learnUrl", "appliesTo"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "level": { "enum": ["Fundamentals", "Associate", "Specialty", "Expert", "Applied Skills"] },
+        "learnUrl": { "type": "string", "format": "uri" },
+        "prerequisites": { "type": "array", "items": { "type": "string" } },
+        "retirementNote": { "type": "string" },
+        "appliesTo": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/applies" }
+        }
+      }
+    },
+    "applies": {
+      "type": "object",
+      "required": ["designation", "metric", "role", "tracks"],
+      "additionalProperties": true,
+      "properties": {
+        "designation": { "type": "string" },
+        "metric": { "enum": ["intermediate", "advanced"] },
+        "role": { "enum": ["step1-required", "step2-required", "step2-elective", "step3-elective", "intermediate-pool", "advanced-pool"] },
+        "tracks": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "enterprise": { "$ref": "#/$defs/trackInfo" },
+            "smb": { "$ref": "#/$defs/trackInfo" }
+          }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "trackInfo": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "step": { "type": "integer" },
+        "pointsValue": { "type": "number" },
+        "pointsRule": { "type": "string" }
+      }
+    }
+  }
+}

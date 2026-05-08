@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/designations.schema.json",
+  "title": "Solutions Partner designations",
+  "type": "object",
+  "required": ["designations"],
+  "properties": {
+    "designations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/designation" }
+    }
+  },
+  "$defs": {
+    "designation": {
+      "type": "object",
+      "required": ["id", "name", "sourceUrl", "minQualifyingScore", "maxScore", "tracks", "categories"],
+      "additionalProperties": true,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "shortName": { "type": "string" },
+        "tagline": { "type": "string" },
+        "sourceUrl": { "type": "string", "format": "uri" },
+        "minQualifyingScore": { "type": "number" },
+        "maxScore": { "type": "number" },
+        "tracks": {
+          "type": "array",
+          "items": { "enum": ["enterprise", "smb"] },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "classification": { "type": "string" },
+        "skillingHasStepGating": { "type": "boolean" },
+        "skillingNotes": { "type": "string" },
+        "categories": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/category" }
+        }
+      }
+    },
+    "category": {
+      "type": "object",
+      "required": ["id", "name", "max", "metrics"],
+      "properties": {
+        "id": { "const": "skilling" },
+        "name": { "type": "string" },
+        "max": { "type": "number" },
+        "metrics": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/metric" }
+        }
+      }
+    },
+    "metric": {
+      "type": "object",
+      "required": ["id", "name", "max"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "max": { "type": "number" },
+        "scoring": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "object", "properties": {
+              "enterprise": { "type": "string" },
+              "smb": { "type": "string" }
+            }}
+          ]
+        }
+      }
+    }
+  }
+}

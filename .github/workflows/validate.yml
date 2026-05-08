@@ -1,0 +1,32 @@
+name: Validate data files
+
+on:
+  pull_request:
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "scripts/validate.mjs"
+      - "package.json"
+      - "package-lock.json"
+  push:
+    branches: [main]
+    paths:
+      - "data/**"
+      - "schemas/**"
+      - "scripts/validate.mjs"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      - run: npm ci
+      - run: npm run validate

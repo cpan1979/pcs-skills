@@ -1,0 +1,67 @@
+name: Refresh content snapshots
+
+# Manual-only workflow. Run after a content reconciliation PR has merged so
+# that the drift baseline is reset to "no drift detected". Never run on a
+# schedule — that would silently rubber-stamp Microsoft Learn changes.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Refresh snapshots
+        run: |
+          mkdir -p .tmp
+          node scripts/check-updates.mjs --write-snapshots > .tmp/refresh-report.json
+          cat .tmp/refresh-report.json
+
+      - name: Stamp meta.json
+        run: |
+          node -e "
+            const fs = require('fs');
+            const m = JSON.parse(fs.readFileSync('data/meta.json', 'utf8'));
+            m.lastChecked = new Date().toISOString();
+            fs.writeFileSync('data/meta.json', JSON.stringify(m, null, 2) + '\n');
+          "
+
+      - name: Open PR with refreshed snapshots
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet snapshots/ data/meta.json; then
+            echo "No snapshot changes to commit."
+            exit 0
+          fi
+
+          BRANCH="chore/refresh-snapshots-$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add snapshots/ data/meta.json
+          git commit -m "chore(content): refresh snapshots after reconciliation"
+          git push origin "$BRANCH"
+
+          gh pr create \
+            --title "chore(content): refresh content drift snapshots" \
+            --body "Manually-triggered refresh of \`snapshots/\` against the latest Microsoft Learn output. Merge after the matching reconciliation PR has merged." \
+            --label content-drift \
+            --base main \
+            --head "$BRANCH"

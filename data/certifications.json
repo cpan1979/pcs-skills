@@ -1,0 +1,917 @@
+{
+  "$schema": "../schemas/certifications.schema.json",
+  "certifications": [
+    {
+      "id": "azure-administrator-associate",
+      "name": "Azure Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-administrator/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        },
+        {
+          "designation": "infrastructure",
+          "metric": "intermediate",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        },
+        {
+          "designation": "digital-app-innovation",
+          "metric": "intermediate",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-solutions-architect-expert",
+      "name": "Azure Solutions Architect Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-solutions-architect/",
+      "prerequisites": ["Azure Administrator Associate or equivalent experience (per Learn credential page)"],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step2-required",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        },
+        {
+          "designation": "infrastructure",
+          "metric": "advanced",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        },
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-database-administrator-associate",
+      "name": "Azure Database Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-database-administrator-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-ai-engineer-associate",
+      "name": "Azure AI Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-engineer/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-data-scientist-associate",
+      "name": "Azure Data Scientist Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-scientist/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-bi-data-analyst-associate",
+      "name": "Power BI Data Analyst Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        },
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-cosmos-db-developer-specialty",
+      "name": "Azure Cosmos DB Developer Specialty",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-cosmos-db-developer-specialty/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fabric-analytics-engineer-associate",
+      "name": "Fabric Analytics Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "fabric-data-engineer-associate",
+      "name": "Fabric Data Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/fabric-data-engineer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-developer-associate",
+      "name": "Azure Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-developer/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-platform-developer-associate",
+      "name": "Power Platform Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-developer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        },
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-devops-engineer-expert",
+      "name": "Azure DevOps Engineer Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/devops-engineer/",
+      "prerequisites": ["Azure Administrator Associate or Azure Developer Associate"],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-platform-solution-architect-expert",
+      "name": "Power Platform Solution Architect Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-solution-architect-expert/",
+      "prerequisites": ["Power Platform Functional Consultant Associate or Power Platform Developer Associate"],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        },
+        {
+          "designation": "business-applications",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 2.14, "pointsRule": "2.14 pts per unique certified person; counted once across all Advanced certs." },
+            "smb": { "pointsValue": 7.5, "pointsRule": "7.5 pts per unique certified person; counted once across all Advanced certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-actions",
+      "name": "GitHub Actions",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/github-actions/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-administration",
+      "name": "GitHub Administration",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/github-administration/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-advanced-security",
+      "name": "GitHub Advanced Security",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/github-advanced-security/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/github-copilot/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-network-engineer-associate",
+      "name": "Azure Network Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-network-engineer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "infrastructure",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "windows-server-hybrid-administrator-associate",
+      "name": "Windows Server Hybrid Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/windows-server-hybrid-administrator/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "infrastructure",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-virtual-desktop-specialty",
+      "name": "Azure Virtual Desktop Specialty",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-virtual-desktop-specialty/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "infrastructure",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-for-sap-workloads-specialty",
+      "name": "Azure for SAP Workloads Specialty",
+      "level": "Specialty",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-for-sap-workloads-specialty/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "infrastructure",
+          "metric": "advanced",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-security-engineer-associate",
+      "name": "Azure Security Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-security-engineer/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step1-required",
+          "tracks": {
+            "enterprise": { "step": 1, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 1, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "security-operations-analyst-associate",
+      "name": "Microsoft Security Operations Analyst",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/security-operations-analyst/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step2-required",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 0, "pointsRule": "Gating only — 2 people required; no points awarded directly." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts (capped) when at least 1 person is certified." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "cybersecurity-architect-expert",
+      "name": "Microsoft Cybersecurity Architect Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/cybersecurity-architect-expert/",
+      "prerequisites": ["Azure Security Engineer Associate, Identity and Access Administrator Associate, Microsoft 365 Security Administrator Associate, or Security Operations Analyst Associate"],
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 6.67, "pointsRule": "6.67 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 8, "pointsRule": "8 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "identity-and-access-administrator-associate",
+      "name": "Identity and Access Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 6.67, "pointsRule": "6.67 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 8, "pointsRule": "8 pts per certified person." }
+          }
+        },
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "information-protection-administrator-associate",
+      "name": "Information Protection Administrator (retired)",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/information-protection-administrator/",
+      "prerequisites": [],
+      "retirementNote": "This certification retired on May 31, 2025. If passed before retirement it remains valid for one year.",
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 6.67, "pointsRule": "6.67 pts per certified person (if still valid)." },
+            "smb": { "step": 3, "pointsValue": 8, "pointsRule": "8 pts per certified person (if still valid)." }
+          },
+          "notes": "Retired May 31, 2025; 1-year validity if passed before retirement."
+        }
+      ]
+    },
+    {
+      "id": "information-security-administrator-associate",
+      "name": "Information Security Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/information-security-administrator/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "security",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 6.67, "pointsRule": "6.67 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 8, "pointsRule": "8 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-finance-functional-consultant-associate",
+      "name": "Dynamics 365 Finance Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-functional-consultant-financials/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-finance-and-operations-apps-developer-associate",
+      "name": "Dynamics 365: Finance and Operations Apps Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-finance-and-operations-apps-developer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-supply-chain-management-functional-consultant-associate",
+      "name": "Dynamics 365 Supply Chain Management Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-functional-consultant-supply-chain-management/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-customer-service-functional-consultant-associate",
+      "name": "Dynamics 365 Customer Service Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-functional-consultant-customer-service/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-field-service-functional-consultant-associate",
+      "name": "Dynamics 365 Field Service Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-functional-consultant-field-service/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-business-central-functional-consultant-associate",
+      "name": "Dynamics 365 Business Central Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-business-central-functional-consultant-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-platform-functional-consultant-associate",
+      "name": "Power Platform Functional Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-functional-consultant-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "power-automate-rpa-developer-associate",
+      "name": "Power Automate RPA Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/power-automate-rpa-developer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-customer-experience-analyst-associate",
+      "name": "Dynamics 365 Customer Experience Analyst Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-customer-experience-analyst-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-supply-chain-management-functional-consultant-expert",
+      "name": "Dynamics 365 Supply Chain Management Functional Consultant Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-supply-chain-management-functional-consultant-expert/",
+      "prerequisites": ["Dynamics 365 Supply Chain Management Functional Consultant Associate"],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 2.14, "pointsRule": "2.14 pts per unique certified person; counted once across all Advanced certs." },
+            "smb": { "pointsValue": 7.5, "pointsRule": "7.5 pts per unique certified person; counted once across all Advanced certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-finance-and-operations-apps-solution-architect-expert",
+      "name": "Dynamics 365: Finance and Operations Apps Solution Architect Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-finance-and-operations-apps-solution-architect-expert/",
+      "prerequisites": ["At least one Dynamics 365 Finance and Operations Apps Associate certification"],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 2.14, "pointsRule": "2.14 pts per unique certified person; counted once across all Advanced certs." },
+            "smb": { "pointsValue": 7.5, "pointsRule": "7.5 pts per unique certified person; counted once across all Advanced certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "d365-business-central-developer-associate",
+      "name": "Dynamics 365 Business Central Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-business-central-developer-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 2.14, "pointsRule": "2.14 pts per unique certified person; counted once across all Advanced certs." },
+            "smb": { "pointsValue": 7.5, "pointsRule": "7.5 pts per unique certified person; counted once across all Advanced certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m365-fundamentals",
+      "name": "Microsoft 365 Fundamentals",
+      "level": "Fundamentals",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/microsoft-365-fundamentals/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m365-teams-administrator-associate",
+      "name": "Microsoft 365 Certified: Teams Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/m365-teams-administrator-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m365-collaboration-communications-systems-engineer-associate",
+      "name": "Microsoft 365 Certified: Collaboration Communications Systems Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/m365-collaboration-communications-systems-engineer/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count." }
+          }
+        },
+        {
+          "designation": "modern-work",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Also counts toward Advanced person count." },
+            "smb": { "pointsRule": "Also counts toward Advanced person count." }
+          },
+          "notes": "Listed by Microsoft as eligible for both the Intermediate and Advanced metrics."
+        }
+      ]
+    },
+    {
+      "id": "m365-endpoint-administrator-associate",
+      "name": "Microsoft 365 Certified: Endpoint Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/modern-desktop/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m365-copilot-and-agent-administration-fundamentals",
+      "name": "Microsoft 365 Certified: Copilot and Agent Administration Fundamentals",
+      "level": "Fundamentals",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/copilot-agent-administration-fundamentals/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Intermediate person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "m365-enterprise-administrator-expert",
+      "name": "Microsoft 365 Certified: Enterprise Administrator Expert",
+      "level": "Expert",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/m365-administrator-expert/",
+      "prerequisites": ["Endpoint Administrator Associate, Teams Administrator Associate, Identity and Access Administrator Associate, or Information Protection Administrator Associate"],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Advanced person count; max 25 combined Skilling pts at 4 Intermediate + 2 Advanced." },
+            "smb": { "pointsRule": "Counts toward Advanced person count; max 25 combined Skilling pts at 2 Intermediate + 1 Advanced." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "teams-meetings-and-meeting-rooms-technical-assessment",
+      "name": "Teams Meetings and Meeting Rooms Technical Assessment",
+      "level": "Applied Skills",
+      "learnUrl": "https://partneruniversity.microsoft.com/?whr=uri:MicrosoftAccount&courseId=18819&scoId=AEFzAQFhH_2013787008",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Counts toward Advanced person count (Partner University assessment, not a Microsoft Certified credential)." },
+            "smb": { "pointsRule": "Counts toward Advanced person count (Partner University assessment, not a Microsoft Certified credential)." }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "pcs-skilling",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Certification-centric guide to the Microsoft Partner Capability Score (PCS) for Solutions Partner designations.",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "check": "node scripts/check-updates.mjs",
+    "snapshots:refresh": "node scripts/check-updates.mjs --write-snapshots",
+    "serve": "npx --yes http-server -c-1 -p 4173 ."
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "diff": "^7.0.0",
+    "turndown": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

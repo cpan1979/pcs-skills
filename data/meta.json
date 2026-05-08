@@ -1,0 +1,11 @@
+{
+  "lastChecked": "2026-05-08T00:00:00Z",
+  "lastSourceUpdate": "2026-05-08T00:00:00Z",
+  "siteVersion": "1.0.0",
+  "sources": [
+    { "id": "business-applications", "url": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-business" },
+    { "id": "azure",                  "url": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-azure" },
+    { "id": "security",               "url": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-security" },
+    { "id": "modern-work",            "url": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-modern-work" }
+  ]
+}

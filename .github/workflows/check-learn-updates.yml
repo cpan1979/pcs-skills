@@ -1,0 +1,50 @@
+name: Check Microsoft Learn for content drift
+
+on:
+  schedule:
+    # 13:00 UTC daily — after Microsoft's typical Learn publish window.
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: content-drift
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run drift check
+        run: |
+          mkdir -p .tmp
+          node scripts/check-updates.mjs > .tmp/report.json
+
+      - name: Open or update issues for changed sources
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          REPORT_PATH: .tmp/report.json
+        run: node scripts/open-drift-issues.mjs
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: drift-report
+          path: .tmp/report.json
+          retention-days: 30

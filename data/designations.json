@@ -1,0 +1,147 @@
+{
+  "$schema": "../schemas/designations.schema.json",
+  "designations": [
+    {
+      "id": "business-applications",
+      "name": "Business Applications",
+      "shortName": "Biz Apps",
+      "tagline": "Dynamics 365 and Power Platform.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-business",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "A partner is classified as Enterprise if they have five or more unique workloads contributing more than $5,000 in revenue per customer tenant in both current month-1 and current month-13. Otherwise SMB.",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 35, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 20, "scoring": {
+            "enterprise": "1 pt per certified person; max 20 from 20 people.",
+            "smb": "4 pts per certified person; max 20 from 5 people."
+          }},
+          { "id": "advanced", "name": "Advanced certifications", "max": 15, "scoring": {
+            "enterprise": "2.14 pts per certified person; max 15 from 7 people.",
+            "smb": "7.5 pts per certified person; max 15 from 2 people."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": false,
+      "skillingNotes": "Each certified individual is counted once per metric, regardless of how many certifications they hold. Some certifications have prerequisites listed on the Learn credential page."
+    },
+    {
+      "id": "data-ai",
+      "name": "Data & AI",
+      "shortName": "Data & AI",
+      "tagline": "Azure data, analytics, and AI workloads.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-azure",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "Classified as SMB if total Azure Consumed Revenue (ACR) over the last 12 months is less than USD 1 million AND more than 80% of customers are SMB. Otherwise Enterprise.",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 40, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 40, "scoring": {
+            "enterprise": "Up to 4 pts per Step 3 person; max 40 from 10 people. Steps 1 and 2 are gating only.",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts cap, Step 3 = 4 pts per person; max 40 from 10 people."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": true,
+      "skillingNotes": "Step 1 and Step 2 are mandatory before any Step 3 points are awarded. Individuals can count toward multiple steps, but only once per step. Advanced certifications are not applicable to Data & AI."
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "shortName": "Infrastructure",
+      "tagline": "Azure infrastructure, networking, and migration.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-azure",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "Classified as SMB if total Azure Consumed Revenue (ACR) over the last 12 months is less than USD 1 million AND more than 80% of customers are SMB. Otherwise Enterprise.",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 40, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 20, "scoring": {
+            "enterprise": "Up to 4 pts per Step 2 person; max 20 from 5 people. Step 1 (Azure Administrator Associate × 2) is gating only.",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts per person; max 20 from 5 people."
+          }},
+          { "id": "advanced", "name": "Advanced certifications", "max": 20, "scoring": {
+            "enterprise": "Up to 4 pts per Step 2 person; max 20 from 5 people. Step 1 (Azure Solutions Architect Expert × 2) is gating only.",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts per person; max 20 from 5 people."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": true,
+      "skillingNotes": "Step 1 is mandatory before any Step 2 points are awarded for both Intermediate and Advanced metrics. Individuals can count toward multiple steps, but only once per step."
+    },
+    {
+      "id": "digital-app-innovation",
+      "name": "Digital & App Innovation",
+      "shortName": "Digital & App Innovation",
+      "tagline": "Cloud-native development, DevOps, and app modernization on Azure.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-azure",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "Classified as SMB if total Azure Consumed Revenue (ACR) over the last 12 months is less than USD 1 million AND more than 80% of customers are SMB. Otherwise Enterprise.",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 40, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 20, "scoring": {
+            "enterprise": "Up to 4 pts per Step 2 person; max 20 from 5 people. Step 1 (Azure Administrator Associate × 2) is gating only.",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts per person; max 20 from 5 people."
+          }},
+          { "id": "advanced", "name": "Advanced certifications", "max": 20, "scoring": {
+            "enterprise": "Up to 4 pts per Step 2 person; max 20 from 5 people. Step 1 (Azure Solutions Architect Expert × 2) is gating only.",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts per person; max 20 from 5 people."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": true,
+      "skillingNotes": "Step 1 is mandatory before any Step 2 points are awarded for both Intermediate and Advanced metrics. Individuals can count toward multiple steps, but only once per step."
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "shortName": "Security",
+      "tagline": "Microsoft 365 security and Azure security workloads.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-security",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "Microsoft evaluates partners on both the Enterprise and SMB paths and awards the higher score at the solution-area level. Each path has its own customer eligibility thresholds (Enterprise: 300+ paid licenses or > $600 ACR; SMB: 5–300 paid licenses or > $600 ACR).",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 20, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 20, "scoring": {
+            "enterprise": "Up to 6.67 pts per Step 3 person. Steps 1 and 2 are gating only (each requires 2 people).",
+            "smb": "Step 1 = 4 pts cap, Step 2 = 4 pts cap, Step 3 = 8 pts per person."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": true,
+      "skillingNotes": "Step 1 and Step 2 are both mandatory before any Step 3 points are awarded. Individuals can count toward multiple steps, but only once per step."
+    },
+    {
+      "id": "modern-work",
+      "name": "Modern Work",
+      "shortName": "Modern Work",
+      "tagline": "Microsoft 365 productivity, Teams, and Copilot.",
+      "sourceUrl": "https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-modern-work",
+      "minQualifyingScore": 70,
+      "maxScore": 100,
+      "tracks": ["enterprise", "smb"],
+      "classification": "Microsoft evaluates partners on both the Enterprise and SMB paths and awards the higher score at the solution-area level. Enterprise = customer tenant with 300+ paid licenses on at least one workload. SMB = 11–300 paid licenses.",
+      "categories": [
+        { "id": "skilling", "name": "Skilling", "max": 25, "metrics": [
+          { "id": "intermediate", "name": "Intermediate certifications", "max": 25, "scoring": {
+            "enterprise": "4 certified persons across Intermediate + Advanced earns the max 25 pts. At least 1 person with an Intermediate cert is required.",
+            "smb": "2 certified persons across Intermediate + Advanced earns the max 25 pts. At least 1 person with an Intermediate cert is required."
+          }},
+          { "id": "advanced", "name": "Advanced certifications", "max": 25, "scoring": {
+            "enterprise": "2 certified persons earns the max. At least 1 person with an Advanced cert is required (can be the same as the Intermediate person).",
+            "smb": "1 certified person earns the max. At least 1 person with an Advanced cert is required (can be the same as the Intermediate person)."
+          }}
+        ]}
+      ],
+      "skillingHasStepGating": false,
+      "skillingNotes": "Each certified individual is counted once per metric, regardless of how many certifications they hold. To earn any points overall, at least one person must hold an Intermediate certification AND at least one person must hold an Advanced certification (can be the same person)."
+    }
+  ]
+}

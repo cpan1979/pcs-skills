@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A certification-centric guide to the Microsoft Partner Capability Score (PCS) for Solutions Partner designations. Toggle between SMB and Enterprise tracks." />
+  <meta name="theme-color" content="#0067B8" />
+  <title>Partner Capability Score — Skilling</title>
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect x='2' y='2' width='13' height='13' fill='%23F25022'/&gt;&lt;rect x='17' y='2' width='13' height='13' fill='%237FBA00'/&gt;&lt;rect x='2' y='17' width='13' height='13' fill='%2300A4EF'/&gt;&lt;rect x='17' y='17' width='13' height='13' fill='%23FFB900'/&gt;&lt;/svg&gt;" />
+
+  <link rel="preload" href="data/designations.json" as="fetch" crossorigin />
+  <link rel="preload" href="data/certifications.json" as="fetch" crossorigin />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#/certs" aria-label="Partner Capability Score Skilling — home">
+        <span class="ms-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-text">
+          <span class="brand-line-1">Microsoft Partner</span>
+          <span class="brand-line-2">Capability Score · Skilling</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="#/certs" data-route="certs">Certifications</a>
+        <a href="#/designations" data-route="designations">Designations</a>
+        <a href="#/about" data-route="about">About</a>
+      </nav>
+
+      <div class="track-toggle" role="group" aria-label="Qualification track">
+        <button type="button" class="track-btn" data-track="smb" aria-pressed="false">SMB</button>
+        <button type="button" class="track-btn is-active" data-track="enterprise" aria-pressed="true">Enterprise</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="site-main" tabindex="-1">
+    <div id="view-root" class="view-root" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-meta">
+        Sourced from Microsoft Learn:
+        <a href="https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-business" target="_blank" rel="noopener">Business&nbsp;Apps</a> ·
+        <a href="https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-azure" target="_blank" rel="noopener">Azure</a> ·
+        <a href="https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-security" target="_blank" rel="noopener">Security</a> ·
+        <a href="https://learn.microsoft.com/en-us/partner-center/membership/solutions-partner-modern-work" target="_blank" rel="noopener">Modern&nbsp;Work</a>
+      </p>
+      <p class="footer-meta">
+        <span id="last-checked">Last checked: —</span> ·
+        <span id="last-update">Last source update: —</span> ·
+        <span>This site is unofficial and provided as a partner navigation aid. Always verify on Microsoft Learn before making business decisions.</span>
+      </p>
+    </div>
+  </footer>
+
+  <template id="tpl-cert-card">
+    <article class="cert-card" tabindex="0">
+      <header class="cert-card-head">
+        <span class="cert-level"></span>
+        <h3 class="cert-name"></h3>
+      </header>
+      <div class="cert-coverage" aria-label="Designation coverage"></div>
+      <p class="cert-summary"></p>
+      <footer class="cert-card-foot">
+        <span class="cert-points"></span>
+        <span class="cert-cta">View details →</span>
+      </footer>
+    </article>
+  </template>
+
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
