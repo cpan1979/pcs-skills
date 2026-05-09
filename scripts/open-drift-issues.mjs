@@ -20,13 +20,13 @@ const SOURCE_NAMES = {
 function getExistingLabels(repo) {
   try {
     const labels = JSON.parse(execSync(
-      `gh label list --repo ${repo} --json name --limit 100`,
+      `gh label list --repo ${repo} --json name --limit 1000`,
       { encoding: "utf8" }
     ));
     return new Set(labels.map((label) => label.name));
   } catch (error) {
     console.warn(`Could not list labels (${error.message}); continuing without label checks.`);
-    return new Set(["content-drift", "copilot"]);
+    return new Set();
   }
 }
 
