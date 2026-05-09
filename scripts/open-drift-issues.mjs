@@ -19,6 +19,7 @@ const SOURCE_NAMES = {
 
 function getExistingLabels(repo) {
   try {
+    // Repositories can have up to 1000 labels; fetch the full set in one call.
     const labels = JSON.parse(execSync(
       `gh label list --repo ${repo} --json name --limit 1000`,
       { encoding: "utf8" }
@@ -52,7 +53,12 @@ async function main() {
   if (hasContentDriftLabel) {
     searchArgs.push("--label", "content-drift");
   }
-  const search = JSON.parse(execSync(`gh ${searchArgs.join(" ")}`, { encoding: "utf8" }));
+  let search = [];
+  try {
+    search = JSON.parse(execSync(`gh ${searchArgs.join(" ")}`, { encoding: "utf8" }));
+  } catch (error) {
+    throw new Error(`Failed to list existing issues (${error.message})`);
+  }
 
   await fs.mkdir(path.join(root, ".tmp"), { recursive: true });
 
