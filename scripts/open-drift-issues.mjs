@@ -17,10 +17,26 @@ const SOURCE_NAMES = {
   "modern-work": "Modern Work"
 };
 
+function getExistingLabels(repo) {
+  try {
+    const labels = JSON.parse(execSync(
+      `gh label list --repo ${repo} --json name --limit 100`,
+      { encoding: "utf8" }
+    ));
+    return new Set(labels.map((label) => label.name));
+  } catch (error) {
+    console.warn(`Could not list labels (${error.message}); continuing without label checks.`);
+    return new Set(["content-drift", "copilot"]);
+  }
+}
+
 async function main() {
   const reportPath = process.env.REPORT_PATH || path.join(root, ".tmp", "report.json");
   const repo = process.env.REPO;
   if (!repo) throw new Error("REPO env var is required");
+  const existingLabels = getExistingLabels(repo);
+  const hasContentDriftLabel = existingLabels.has("content-drift");
+  const labelsToApply = ["content-drift", "copilot"].filter((label) => existingLabels.has(label));
 
   const report = JSON.parse(await fs.readFile(reportPath, "utf8"));
   const template = await fs.readFile(path.join(root, "scripts", "templates", "issue-body.md"), "utf8");
@@ -32,10 +48,11 @@ async function main() {
   }
 
   // Search once for all open issues with the content-drift label.
-  const search = JSON.parse(execSync(
-    `gh issue list --repo ${repo} --state open --label content-drift --json number,title --limit 50`,
-    { encoding: "utf8" }
-  ));
+  const searchArgs = ["issue", "list", "--repo", repo, "--state", "open", "--json", "number,title", "--limit", "50"];
+  if (hasContentDriftLabel) {
+    searchArgs.push("--label", "content-drift");
+  }
+  const search = JSON.parse(execSync(`gh ${searchArgs.join(" ")}`, { encoding: "utf8" }));
 
   await fs.mkdir(path.join(root, ".tmp"), { recursive: true });
 
@@ -72,10 +89,11 @@ async function main() {
         "--repo", repo,
         "--title", title,
         "--body-file", tmpFile,
-        "--label", "content-drift",
-        "--label", "copilot",
         "--assignee", "Copilot"
       ];
+      for (const label of labelsToApply) {
+        args.push("--label", label);
+      }
       const result = spawnSync("gh", args, { encoding: "utf8" });
       if (result.status !== 0) {
         console.warn(`Failed with --assignee Copilot (${result.stderr.trim()}); retrying without assignment.`);
