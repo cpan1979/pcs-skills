@@ -912,6 +912,186 @@
           }
         }
       ]
+    },
+    {
+      "id": "dynamics-365-sales-ai-consultant-associate",
+      "name": "Dynamics 365 Sales AI Consultant Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-sales-ai-consultant-associate/?practice-assessment-type=certification",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "intelligent-applications-builder-associate",
+      "name": "Intelligent Applications Builder Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/intelligent-applications-builder-associate/?practice-assessment-type=certification",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "dynamics-365-contact-center-ai-engineer-associate",
+      "name": "Dynamics 365 Contact Center AI Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/d365-contact-center-ai-engineer-associate/?practice-assessment-type=certification",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "intermediate",
+          "role": "intermediate-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 1, "pointsRule": "1 pt per unique certified person; counted once across all Intermediate certs." },
+            "smb": { "pointsValue": 4, "pointsRule": "4 pts per unique certified person; counted once across all Intermediate certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "agentic-ai-business-solutions-architect",
+      "name": "Agentic AI Business Solutions Architect",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/agentic-ai-business-solutions-architect/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "business-applications",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsValue": 2.14, "pointsRule": "2.14 pts per unique certified person; counted once across all Advanced certs." },
+            "smb": { "pointsValue": 7.5, "pointsRule": "7.5 pts per unique certified person; counted once across all Advanced certs." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "sql-ai-developer-associate",
+      "name": "SQL AI Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/browse/?terms=SQL%20AI%20Developer%20Associate",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-ai-apps-and-agents-developer-associate",
+      "name": "Azure AI Apps and Agents Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/browse/?terms=Azure%20AI%20Apps%20and%20Agents%20Developer%20Associate",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "machine-learning-operations-engineer-associate",
+      "name": "Machine Learning Operations Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/browse/?terms=Machine%20Learning%20Operations%20Engineer%20Associate",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-databricks-data-engineer-associate",
+      "name": "Azure Databricks Data Engineer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/browse/?terms=Azure%20Databricks%20Data%20Engineer%20Associate",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "data-ai",
+          "metric": "intermediate",
+          "role": "step3-elective",
+          "tracks": {
+            "enterprise": { "step": 3, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 3, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "azure-ai-cloud-developer-associate",
+      "name": "Azure AI Cloud Developer Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-cloud-developer-associate/?practice-assessment-type=certification",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-certified-agentic-ai-developer",
+      "name": "GitHub Certified: Agentic AI Developer",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/agentic-ai-developer/?practice-assessment-type=certification",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "digital-app-innovation",
+          "metric": "intermediate",
+          "role": "step2-elective",
+          "tracks": {
+            "enterprise": { "step": 2, "pointsValue": 4, "pointsRule": "Up to 4 pts per certified person." },
+            "smb": { "step": 2, "pointsValue": 4, "pointsRule": "4 pts per certified person." }
+          }
+        }
+      ]
     }
   ]
 }
