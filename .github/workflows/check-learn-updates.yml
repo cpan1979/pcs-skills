@@ -7,8 +7,9 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
+  pull-requests: write
 
 concurrency:
   group: content-drift
@@ -41,10 +42,45 @@ jobs:
           REPORT_PATH: .tmp/report.json
         run: node scripts/open-drift-issues.mjs
 
-      - name: Upload report artifact
+      # Deterministic, no-AI reconciliation: parses the live elective/pool
+      # certification lists directly and patches data/certifications.json
+      # for anything genuinely missing. Runs independently of the drift
+      # check above (it does its own fetch), and only ever adds — it never
+      # deletes or auto-renames, see scripts/reconcile-certifications.mjs
+      # for why. A PR is opened only when it actually added something.
+      - name: Reconcile certification data
+        run: npm run reconcile
+
+      - name: Validate reconciled data
+        run: npm run validate
+
+      - name: Open PR for certification data changes
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [ "$(cat .tmp/reconcile-changed 2>/dev/null)" = "true" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            BRANCH="content-drift/reconcile-$(date -u +%Y%m%d-%H%M%S)"
+            git checkout -b "$BRANCH"
+            git add data/certifications.json
+            git commit -m "chore(content): reconcile certification data from Microsoft Learn"
+            git push origin "$BRANCH"
+            gh pr create \
+              --title "chore(content): reconcile certification data ($(date -u +%Y-%m-%d))" \
+              --body-file .tmp/reconcile-report.md \
+              --base main \
+              --head "$BRANCH"
+          else
+            echo "No certification data changes to open a PR for."
+          fi
+
+      - name: Upload report artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: drift-report
-          path: .tmp/report.json
+          path: |
+            .tmp/report.json
+            .tmp/reconcile-report.md
           retention-days: 30
