@@ -1092,6 +1092,24 @@
           }
         }
       ]
+    },
+    {
+      "id": "microsoft-365-and-ai-services-administrator-associate",
+      "name": "Microsoft 365 and AI Services Administrator Associate",
+      "level": "Associate",
+      "learnUrl": "https://learn.microsoft.com/en-us/credentials/certifications/ai-services-administrator-associate/",
+      "prerequisites": [],
+      "appliesTo": [
+        {
+          "designation": "modern-work",
+          "metric": "advanced",
+          "role": "advanced-pool",
+          "tracks": {
+            "enterprise": { "pointsRule": "Also counts toward Advanced person count." },
+            "smb": { "pointsRule": "Also counts toward Advanced person count." }
+          }
+        }
+      ]
     }
   ]
 }
